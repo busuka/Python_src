@@ -1,3 +1,5 @@
+#skilearnをテストしてみる.
+
 __author__ = 'Owner'
 from sklearn.datasets import load_digits
 digits = load_digits()

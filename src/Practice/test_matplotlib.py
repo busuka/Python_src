@@ -1,3 +1,4 @@
+#minicondaの動作確認
 __author__ = 'Owner'
 
 import os

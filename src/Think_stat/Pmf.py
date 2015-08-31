@@ -234,7 +234,7 @@ class Pmf(_DictWrapper):
             float mean
         """
         mu = 0.0
-        for x, p in self.d.iteritems():
+        for x, p in self.d.items():
             mu += p * x
         return mu
 
@@ -252,14 +252,14 @@ class Pmf(_DictWrapper):
             mu = self.Mean()
             
         var = 0.0
-        for x, p in self.d.iteritems():
+        for x, p in self.d.items():
             var += p * (x - mu)**2
         return var
 
     def Log(self):
         """Log transforms the probabilities."""
         m = self.MaxLike()
-        for x, p in self.d.iteritems():
+        for x, p in self.d.items():
             self.Set(x, math.log(p/m))
 
     def Exp(self):

@@ -3,6 +3,7 @@
 
 from Think_stat import survey2
 from Think_stat import Pmf
+import matplotlib.pyplot as plt
 
 def Reading_Data():
     table = survey2.Pregnancies()
@@ -68,6 +69,11 @@ print("第一子PMFのみ早産",ProbEarly(first_hist,first_pmf))
 print("第一子PMFのみ標準",ProbOnTime(first_hist,first_pmf))
 print("第一子PMFのみ遅産",Problate(first_hist,first_pmf))
 
+#ヒストグラム化
+vals, freq = first_hist.Render()
+rectagres = plt.bar(vals,freq)
+plt.show()
+
 #条件付き確率:第二子以降のみのデータで各期間ごとの確率を算出
 print("第二子以降PMFのみ早産",ProbEarly(nfirst_hist,nfirst_pmf))
 print("第二子以降PMFのみ標準",ProbOnTime(nfirst_hist,nfirst_pmf))
@@ -77,7 +83,6 @@ print("第二子以降PMFのみ遅産",Problate(nfirst_hist,nfirst_pmf))
 print("PMF早産",ProbEarly(first_hist,first_pmf)+ProbEarly(nfirst_hist,nfirst_pmf))
 print("PMF標準",ProbOnTime(first_hist,first_pmf)+ProbOnTime(nfirst_hist,nfirst_pmf))
 print("PMF遅産",Problate(first_hist,first_pmf)+Problate(nfirst_hist,nfirst_pmf))
-
 
 
 

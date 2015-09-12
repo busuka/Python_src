@@ -36,5 +36,7 @@ for p in nfirst_rec:
 
 first_cdf = Cdf.Cdf(firsts)
 nfirst_cdf = Cdf.Cdf(nfirsts)
-myplot.Cdf(first_cdf.)
+first_oz = first_cdf.Values()
+nfirst_oz = nfirst_cdf.Values()
+myplot.Cdf(first_cdf)
 myplot.show()

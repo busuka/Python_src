@@ -1,5 +1,6 @@
 from Think_stat import survey2
 from Think_stat import Cdf
+from Think_stat import Pmf
 from Think_stat import myplot
 
 def distributions():
@@ -34,9 +35,5 @@ for i in first_rec:
 for p in nfirst_rec:
     nfirsts.append(p.birthwgt_oz)
 
-first_cdf = Cdf.Cdf(firsts)
-nfirst_cdf = Cdf.Cdf(nfirsts)
-first_oz = first_cdf.Values()
-nfirst_oz = nfirst_cdf.Values()
-myplot.Cdf(first_cdf)
-myplot.show()
+first_cdf = Cdf.MakeCdfFromList(firsts)
+nfirst_cdf = Cdf.MakeCdfFromList(nfirsts)

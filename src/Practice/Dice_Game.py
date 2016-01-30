@@ -1,5 +1,12 @@
 import random
 
+class field:
+    #ボードクラス
+    def __init__(self,goal = 10):
+        self.goal = goal
+
+
+
 class dice:
     #すごろくクラス
 

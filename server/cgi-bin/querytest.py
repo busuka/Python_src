@@ -7,8 +7,6 @@ foo = %s
 
 import cgi
 
-form = cgi.FieldStorage()    # (1)
+form = cgi.FieldStorage()
 print( "Content-type: text/html¥n")
-print(html_body % foo)
-
-
+print(html_body)

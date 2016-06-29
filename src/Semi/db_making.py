@@ -27,4 +27,3 @@ print(result)
 
 #DBからクローズ処理
 con.close()
-

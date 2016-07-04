@@ -9,5 +9,5 @@ class TestingOne:
         self.e = "1 6 6"  # 5番目の横線 1番目の縦線の上から6cmの位置から、2番目の縦線の上から6cmの位置に線が引かれる
         self.l = [self.a, self.b, self.c, self.d, self.e]
 
-    def insert(self,i):
+    def insert(self, i):
         return self.l[i]

@@ -1,6 +1,6 @@
 def checkio(number):
     v = list(str(number))
-    mv = list(map(lambda x : x.replace('0','1'),v))
+    mv = list(map(lambda x: x.replace('0','1'),v))
     nv = list(map(int, mv))
     pdt = 1
     for i in nv:

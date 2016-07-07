@@ -1027,7 +1027,6 @@ class Cdf(object):
         of significant digits is determined by multiplier.  The
         default is 1000, which keeps log10(1000) = 3 significant digits.
         """
-        # TODO(write this method)
         raise UnimplementedMethodException()
 
     def Render(self):
@@ -2258,7 +2257,6 @@ def ReadStataDct(dct_file):
             # In the meantime, it lops one character off the end of the
             # last field.
 
-            # TODO: replace -1 with None (see DocString above)
             colspecs.append((start-1, -1))
 
     return Dictionary(variables, colspecs, names)

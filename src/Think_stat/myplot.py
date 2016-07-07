@@ -95,7 +95,6 @@ def PrePlot(num=None, rows=1, cols=1):
     if num:
         Brewer.InitializeIter(num)
 
-    # TODO: get sharey and sharex working.  probably means switching
     # to subplots instead of subplot.
     # also, get rid of the gray background.
 
@@ -443,7 +442,6 @@ def Show(**options):
 
     options: keyword args used to invoke various pyplot functions
     """
-    # TODO: figure out how to show more than one plot
     Config(**options)
     pyplot.show()
 

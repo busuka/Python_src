@@ -33,6 +33,8 @@ class Stacks():
     def check(self):
         print(self.list)
 
+    # TODO Write optimize the def.
+
 
 
 

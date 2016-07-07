@@ -24,7 +24,7 @@ def output_max_One(test_list):
     max_list = []
     for i in range(numLoop - 1):
         cval = test_list[start_i]
-        max_list.append(max([x - cval for x in test_list[(start_i+1):end_i]]))
+        max_list.append(max([x - cval for x in test_list[(start_i + 1):end_i]]))
         start_i += 1
 
     print(max(max_list))
@@ -57,14 +57,11 @@ def output_max_Two(test_list):
     print(maxv)
 
 
-
-
-testOne = [6,5,3,1,3,4,3]
-testTwo = [3,4,3,2]
-testThree = [7,3,2,4,1,5,3,6]
-testFour = [2,100000,1]
-testFive = list(map(int,ImportCase.autoinput_returnlist("ALDS1_1Short.txt")))
-
+testOne = [6, 5, 3, 1, 3, 4, 3]
+testTwo = [3, 4, 3, 2]
+testThree = [7, 3, 2, 4, 1, 5, 3, 6]
+testFour = [2, 100000, 1]
+testFive = list(map(int, ImportCase.autoinput_returnlist("ALDS1_1Short.txt")))
 
 # Algorithms1での実行 O(n^2)
 start_time = time.time()
@@ -83,9 +80,6 @@ output_max_Two(testThree)
 output_max_Two(testFour)
 output_max_Two(testFive)
 print(time.time() - start_time)
-
-
-
 
 '''
 提出用コード

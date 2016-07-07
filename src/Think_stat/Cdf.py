@@ -126,7 +126,6 @@ class Cdf(object):
         of significant digits is determined by multiplier.  The
         default is 1000, which keeps log10(1000) = 3 significant digits.
         """
-        # TODO(write this method)
         pass
 
     def Render(self):

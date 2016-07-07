@@ -1,7 +1,7 @@
 # Ctlr + del で単語消し
+
 # 16進数→10進数
 print(0xAAA)
-
 
 # 文字列を複製
 s = "abc"
@@ -70,4 +70,18 @@ strings_list = ["left", "fight", "left"]
 print(list(filter(lambda v : v == "left", strings_list)))
 print([v for v in strings_list if v == "left"])
 
-# クロージャ
+# 引数の要素が全てTrueならTrueを返すAll
+# 引数の要素が一つでもTrueならTrueを返すany
+print(all(x % 2 == 0 for x in [1, 2, 3]))
+print(any(x % 2 == 0 for x in [1, 2, 3]))
+
+# itertoolsを用いることでイテレータを自由自在に操れる.
+import itertools
+
+# itertool.chain:リストを合体してあたかも同じイテラブルかのように動作させる
+print([items for items in itertools.chain([1, 2], ['a', 'b'])])
+
+# itertool.accumulate:要素を一つにまとめた値を計算する.デフォルトでは和.
+# 第2引数には関数を受け付ける.例えばlambdaでは総乗を計算する関数を適用してみる.
+print([items for items in itertools.accumulate([1,2,3,4,5])])
+print([items for items in itertools.accumulate([1,2,3,4,5], lambda a, b: a * b)])

@@ -93,9 +93,9 @@ def merge(v, left, mid, right):
     L.append(-99999)
     R.append(-99999)
 
-    i = 0
-    j = 0
-    k = left
+    i = 0  # 左の配列のインデックス
+    j = 0  # 右の配列のインデックス
+    k = left  # マージ終了を数えるカウンタ
 
     while k <= right - 1:  # right - 1にすることにより番兵同士の判定は行われることはない.(番兵が元の配列に代入されない)
         if L[i] >= R[j]:
@@ -112,6 +112,7 @@ def partition(v, begin, end):
     firstv_i = begin - 1
     secondv_j = begin
     while secondv_j < end:
+        # xより小さい場合の処理.大きい場合はjを進めるだけ.
         if v[secondv_j] <= endval:
             firstv_i += 1
             v[firstv_i], v[secondv_j] = v[secondv_j], v[firstv_i]
@@ -139,4 +140,4 @@ test_listSix = [13,19,9,5,12,8,7,4,21,2,6,11]
 #print(test_listFour)
 #print(time.time() - start_time)
 
-print(partition(test_listSix,0,len(test_listSix)-1))
+print(partition(test_listSix, 0, len(test_listSix)-1))

@@ -11,8 +11,11 @@ def verify_anagrams(first_word, second_word):
     else:
         return False
 
+def verify_anagramsNO1(a,b):
+    return sorted(a.lower().replace(' ','')) == sorted(b.lower().replace(' ',''))
+
 if __name__ == '__main__':
-    #These "asserts" using only for self-checking and not necessary for auto-testing
+    # These "asserts" using only for self-checking and not necessary for auto-testing
     assert isinstance(verify_anagrams("a", 'z'), bool), "Boolean!"
     assert verify_anagrams("Programming", "Gram Ring Mop") == True, "Gram of code"
     assert verify_anagrams("Hello", "Ole Oh") == False, "Hello! Ole Oh!"

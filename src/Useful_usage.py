@@ -1,5 +1,5 @@
 # cmd + ctl + -> or B : wordごと移動
-# alt + ↑ or ↓ : 行入れ替え
+# alt + ↑ or ↓ : 行入れ替え(Move line up)
 
 
 # 16進数→10進数
@@ -18,6 +18,16 @@ print(s * 3)  # => "abcabcabc"
 
 # リストも同じように出来る.
 print([x for x in range(-1,2)] * 3)
+
+
+# 転置をするプログラム.
+# リストをアンパックし,渡すことができる.(*でリストなど、**で辞書を解凍できる.)
+# [[1,2],[3,4]] => [1,2] [3,4] とすることができる.zip関数とともに用いると便利.
+data = [[1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]]
+print([list(x) for x in zip(*data)])
+
 
 # 重複する文字列を削除
 s = "letter"
@@ -40,7 +50,11 @@ eg_dict = dict(a=3, b=2, c=1)
 print(eg_dict)
 print(OrderedDict(sorted(eg_dict.items(), key=lambda t: t[1])))  # 値ごとでソートして返す辞書
 
-# !注意 リストのコピーはポインタのコピーである
+# !!!!注意 リスト(ミュータブル)のコピーはポインタのコピーである!!!!
+# list dict setなどはミュータブル.
+# int str tuple frozensetなどはイミュータブル.
+# イミュータブルであれば事実上、値渡しになる.(実際は参照を渡すが、コピーしようとするとPythonが自動でコピーを施してくれる.)
+
 l = ["a", "b", "c"]
 lc = l
 l[0] = "d"

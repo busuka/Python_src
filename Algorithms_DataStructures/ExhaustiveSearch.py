@@ -6,14 +6,14 @@ def ExSearch(list_i, aim):
     数列の各要素を使用するかしないかの2択なので,再帰を2分割することになる.
 
     Args:
-        list_i: リストの何番目から始めるかを定める変数 = 0でよい.
+        list_i: リストの何番目から始めるかを定める変数.初期値 = 0でよい.
         aim:    数列の加算より算出したい数値を決める.
 
     Returns: True or False
 
     """
-    if aim == 0: return 1
-    if list_i >= len(testOne): return 0
+    if aim == 0: return True
+    if list_i >= len(testOne): return False
     res0 = ExSearch(list_i + 1, aim)  # 最初の1を引かずに次の数字5へ.(testOne[list_i]を無視している).
     res1 = ExSearch(list_i + 1, aim - testOne[list_i])  # 最初の1を引いて次の数字5へ.
     if res0 == res1 == 0:
@@ -22,5 +22,13 @@ def ExSearch(list_i, aim):
         return True
 
 
+def ExSearchDP(i, m):
+    if dp[i][m] is not None:
+        return dp[i][m]
+
+
 testOne = [1, 5, 7]
-print(ExSearch(0, 14))
+print(ExSearch(0, 12))
+
+dp = [[None for x in range(20)] for y in range(20)]
+print(dp)

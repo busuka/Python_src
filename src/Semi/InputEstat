@@ -1,0 +1,2 @@
+import pandas as pd
+pd.read_csv("e-stat0000030001.csv")

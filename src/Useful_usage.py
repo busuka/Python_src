@@ -1,5 +1,6 @@
 # cmd + ctl + -> or B : wordごと移動
 # alt + ↑ or ↓ : 行入れ替え(Move line up)
+# Shift + alt + G : pyふぁいる検索.
 
 
 # 16進数→10進数

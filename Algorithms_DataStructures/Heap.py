@@ -31,8 +31,38 @@ class CompleteBinaryTree():
             print("")
 
 
+def build_max_heap(l):
+    i = len(l) // 2
+    while i >= 0:
+        max_heap(l, i)
+        i -= 1
+        print(l)
+    return l
+
+
+def max_heap(l,i):
+    left = i * 2
+    right = i * 2 + 1
+
+    # 左の子が最大であれば選ぶ.
+    if left < len(l) and l[left] > l[i]:
+        largest = left
+
+    # 自身が最大もしくは右の子が最大の場合.
+    else:
+        largest = i
+
+    # 右の子が最大であれば選ぶ.
+    if right < len(l) and l[right] > l[i]:
+        largest = right
+
+    if i != largest:
+        l[i], l[largest] = l[largest], l[i]
+        max_heap(l,largest)
 
 
 if __name__ == "__main__":
     cbt = CompleteBinaryTree([7, 8, 1, 2, 3])
     cbt.print()
+
+    print(build_max_heap([4,1,3,2,16,9,10,14,8,7]))
